@@ -1,19 +1,6 @@
 // const { mock } = require('cypress/types/sinon');
 const mockFunctions = require('../src/mockFunctions');
 
-/*
-Criamos uma série de funções com eficiência duvidosa.
-Elas estão no arquivo 'src/mockFunctions.js'.
-Crie mock functions para cada uma das operações de modo que os cálculos sejam feitos corretamente,
-não como estão sendo feitos no arquivo original.
-A idéia é que os novos testes sobrescrevam os testes
-importados apenas na suite de testes abaixo.
-
-Importante! A correção de código via mock functions não é uma aplicação usual.
-O foco aqui é a utilização de mock functions.
-
-ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
-*/
 
 describe('3 - Verifica as funções e os mocks', () => {
   mockFunctions.add = (a, b) => a + b;
@@ -66,11 +53,4 @@ describe('3 - Verifica as funções e os mocks', () => {
     expect(mockFunctions.power(1, 10)).toEqual(1);
     expect(mockFunctions.power(0, 0)).toEqual(1);
   });
-  // test('testa função factorial', () => {
-  //   // expect(mockFunctions.factorial(5)).toEqual(120);
-  //   // expect(mockFunctions.factorial(10)).toEqual(3628800);
-  //   // expect(mockFunctions.factorial(3)).toEqual(6);
-  //   // expect(mockFunctions.factorial(8)).toEqual(40320);
-  //   // expect(mockFunctions.factorial(2)).toEqual(2);
-  // });
-});
+
